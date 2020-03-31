@@ -1,0 +1,146 @@
+* {
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
+
+}
+
+h2 {
+    text-align: center;
+    color: white;
+    padding-top: 3em;
+    text-shadow: black 1px 1px;
+    font-size: 2.5rem;
+    animation: fade-in 1500ms ease-in;
+}
+
+.background {
+    height: 100vh;
+    background-image: url(ketan-krishnan-h4CHD1esvn0-unsplash.jpg);
+    background-size: cover;
+    animation: change 10s infinite;
+}
+
+.title {
+    color: black;
+    text-align: center;
+    font-size: 4.5rem;
+    padding: 20px 0;
+    background-color: rgba(255, 255, 255, 0.753);
+    font-family: 'Liu Jian Mao Cao', cursive;
+    animation: fade-in 1500ms ease-in;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* @keyframes change {
+
+    0% {
+        background-color: slateblue;
+    }
+
+    33% {
+        background-color: cornflowerblue;
+    }
+
+    66% {
+        background-color: mediumslateblue;
+    }
+
+    100% {
+        background-color: slateblue;
+    }
+} */
+
+
+
+
+.search-form {
+    text-align: center;
+    transform: translateY(10vh);
+
+}
+
+.input,
+i {
+    font-size: 2.5rem;
+    text-align: center;
+    outline: none;
+    cursor: pointer;
+    border: none;
+    height: 5rem;
+    width: 5rem;
+    border-radius: 3rem;
+    transition: 300ms ease-out;
+    font-family: 'FontAwesome';
+    background: rgba(255, 255, 255, 0.87);
+    box-shadow: rgba(0, 0, 0, 0.418) 0 0 5px 5px;
+    animation: fade-in 1500ms ease-in;
+}
+
+
+
+
+.input:focus {
+    transform: scale(1.2)
+}
+
+.input:hover {
+    transform: scale(1.2)
+}
+
+
+
+i {
+    position: absolute;
+    color: black;
+    z-index: 2;
+
+}
+
+
+input:focus {
+    width: 20rem
+}
+
+input::placeholder {
+    color: black
+}
+
+.overlay {
+    height: 100vh;
+    width: 100vw;
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.571));
+}
+
+.results-page {
+    background: white;
+    height: 500px;
+    z-index: 2;
+    position: absolute;
+    width: 100%;
+    top: 7rem;
+    display: flex;
+}
+
+@media only screen and (max-device-width: 480px) {
+    :root {
+        font-size: 11px;
+    }
+}
+
+@media only screen and (max-device-height: 900px) and (min-device-height: 800px) {
+    .input {
+        margin-top: 20px;
+    }
+}
