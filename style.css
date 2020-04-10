@@ -9,7 +9,7 @@
 h2 {
     text-align: center;
     color: white;
-    padding-top: 3em;
+    padding: 3rem 0 1rem 0;
     text-shadow: black 1px 1px;
     font-size: 2.5rem;
     animation: fade-in 1500ms ease-in;
@@ -31,6 +31,7 @@ h2 {
     animation: fade-in 1500ms ease-in;
     height: 13rem;
     z-index: 100;
+    padding: .6rem 0 0 0;
 }
 
 @keyframes fade-in {
@@ -64,12 +65,8 @@ h2 {
 } */
 
 
-
-
 .search-form {
     text-align: center;
-    /* transform: translateY(10vh); */
-
 }
 
 .input,
@@ -151,45 +148,26 @@ input::placeholder {
     grid-row: span 2;
 }
 
-/* .in-header {
-
-    z-index: 30px;
-    transition: none;
-    width: 3rem;
-    height: 3rem;
-    font-size: 1rem;
-    position: absolute;
-    right: 10%;
-    top: 2%;
-} */
-
-/* .header-expanded:focus {
-    width: 15rem;
-    position: fixed;
-    transform-origin: right right;
-
-} */
-
-.header-with-images {
-    text-align: left;
-    padding-left: 10px;
-    padding-top: 2.5%;
-    display: flex;
-    justify-content: space-between;
-}
-
-.toggle-show {
-    display: none;
-}
 
 @media only screen and (max-device-width: 480px) {
     :root {
         font-size: 11px;
     }
+
+
 }
 
 @media only screen and (max-device-height: 900px) and (min-device-height: 800px) {
     .input {
         margin-top: 20px;
     }
+
+
+}
+
+@media only screen and (max-device-width: 780px) {
+    .results-page {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
 }

@@ -15,7 +15,6 @@ search = searchTerm => {
     .then(result => {
       toggleStyles();
       header.appendChild(form);
-      // header.classList.add("header-with-images");
       result.results.forEach(image => {
         console.log("shit");
         const galleryItem = document.createElement("div");
@@ -27,27 +26,11 @@ search = searchTerm => {
         imageDiv.innerHTML =
           "<img class='image' src=" + image.urls.regular + ">";
         form.classList.remove("toggle-show");
-        // document.querySelector(".results-page").prepend(form);
-        // form.classList.add("in-header");
         input.classList.add("header-expanded");
         form.addEventListener("submit", e => {
           e.preventDefault();
-          // galleryItem.remove();
           document.querySelector(".results-page").remove();
         });
-        // galleryItem.addEventListener("click", e => {
-        //   e.preventDefault();
-        //   if (galleryItem.className != "w2") {
-        //     galleryItem.classList.add("w2");
-        //   }
-        //   if (galleryItem.className.includes("w2")) {
-        //     galleryItem.classList.toggle("w2");
-        //   }
-        // });
-        // galleryItem.addEventListener("mouseleave", e => {
-        //   e.preventDefault();
-        //   galleryItem.classList.remove("w2");
-        // });
       });
 
       console.log(result.results);
@@ -56,11 +39,8 @@ search = searchTerm => {
 };
 
 toggleStyles = () => {
-  // const searchDiv = document.createElement("div");
-  // searchDiv.className = "search-div";
   const resultsContainer = document.createElement("div");
   resultsContainer.className = "results-page";
-  // document.body.appendChild(searchDiv);
   document.body.appendChild(resultsContainer);
   console.log(results);
 };
@@ -70,6 +50,7 @@ input.addEventListener("focus", e => {
   input.style = "font-family: 'Raleway', sans-serif";
   input.placeholder = "";
 });
+
 input.addEventListener("blur", e => {
   e.preventDefault();
   input.style = "font-family: FontAwesome";
