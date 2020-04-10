@@ -1,4 +1,3 @@
-const key = "9WFravDWlCEXEUO64lPcQxTZ3ZvHE6om_bGiD4b8phc";
 const secret = "Qk_ChPr6IyqESWW4du7AcMwSZOq78cWNO1O5nvThz5E";
 const URL = `https://api.unsplash.com/search/photos?page=1&per_page=50&client_id=${key}`;
 const input = document.querySelector(".input");
@@ -16,7 +15,6 @@ search = searchTerm => {
       toggleStyles();
       header.appendChild(form);
       result.results.forEach(image => {
-        console.log("shit");
         const galleryItem = document.createElement("div");
         galleryItem.className = "gallery-item";
         const imageDiv = document.createElement("div");
@@ -42,7 +40,6 @@ toggleStyles = () => {
   const resultsContainer = document.createElement("div");
   resultsContainer.className = "results-page";
   document.body.appendChild(resultsContainer);
-  console.log(results);
 };
 
 input.addEventListener("focus", e => {
