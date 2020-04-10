@@ -44,27 +44,6 @@ h2 {
     }
 }
 
-
-/* @keyframes change {
-
-    0% {
-        background-color: slateblue;
-    }
-
-    33% {
-        background-color: cornflowerblue;
-    }
-
-    66% {
-        background-color: mediumslateblue;
-    }
-
-    100% {
-        background-color: slateblue;
-    }
-} */
-
-
 .search-form {
     text-align: center;
 }
