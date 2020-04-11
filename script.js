@@ -1,4 +1,3 @@
-const secret = "Qk_ChPr6IyqESWW4du7AcMwSZOq78cWNO1O5nvThz5E";
 const URL = `https://api.unsplash.com/search/photos?page=1&per_page=50&client_id=${key}`;
 const input = document.querySelector(".input");
 const form = document.querySelector(".search-form");
@@ -7,14 +6,14 @@ const overlay = document.querySelector(".overlay");
 const header = document.querySelector(".title");
 let results = [];
 
-search = searchTerm => {
+search = (searchTerm) => {
   let url = `${URL}&query=${searchTerm}`;
   return fetch(url)
-    .then(response => response.json())
-    .then(result => {
+    .then((response) => response.json())
+    .then((result) => {
       toggleStyles();
       header.appendChild(form);
-      result.results.forEach(image => {
+      result.results.forEach((image) => {
         const galleryItem = document.createElement("div");
         galleryItem.className = "gallery-item";
         const imageDiv = document.createElement("div");
@@ -25,7 +24,7 @@ search = searchTerm => {
           "<img class='image' src=" + image.urls.regular + ">";
         form.classList.remove("toggle-show");
         input.classList.add("header-expanded");
-        form.addEventListener("submit", e => {
+        form.addEventListener("submit", (e) => {
           e.preventDefault();
           document.querySelector(".results-page").remove();
         });
@@ -42,20 +41,20 @@ toggleStyles = () => {
   document.body.appendChild(resultsContainer);
 };
 
-input.addEventListener("focus", e => {
+input.addEventListener("focus", (e) => {
   e.preventDefault();
   input.style = "font-family: 'Raleway', sans-serif";
   input.placeholder = "";
 });
 
-input.addEventListener("blur", e => {
+input.addEventListener("blur", (e) => {
   e.preventDefault();
   input.style = "font-family: FontAwesome";
   input.value = "";
   input.placeholder = "\uf002";
 });
 
-form.addEventListener("submit", e => {
+form.addEventListener("submit", (e) => {
   e.preventDefault();
   let searchTerm = input.value;
   search(searchTerm);
