@@ -66,12 +66,9 @@ i {
     animation: fade-in 1500ms ease-in;
 }
 
-input:focus::-webkit-input-placeholder {
-    color: transparent;
-}
 
 .input:focus {
-    transform: scale(1.1);
+    transform: scale(1.1)
 }
 
 .input:hover {
