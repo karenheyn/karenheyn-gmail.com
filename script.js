@@ -1,4 +1,4 @@
-const URL = `https://api.unsplash.com/search/photos?page=1&per_page=50&client_id=${process.env.key}`;
+const URL = `https://api.unsplash.com/search/photos?page=1&per_page=50&client_id=${key}`;
 const input = document.querySelector(".input");
 const form = document.querySelector(".search-form");
 const background = document.querySelector(".background");
