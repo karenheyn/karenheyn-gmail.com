@@ -1,4 +1,5 @@
-const URL = `https://api.unsplash.com/search/photos?page=1&per_page=50&client_id=${key}`;
+require("dotenv").config();
+const URL = `https://api.unsplash.com/search/photos?page=1&per_page=50&client_id=${process.env.KEY}`;
 const input = document.querySelector(".input");
 const form = document.querySelector(".search-form");
 const background = document.querySelector(".background");
