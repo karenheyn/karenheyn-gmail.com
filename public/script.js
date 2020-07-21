@@ -1,5 +1,4 @@
-require("dotenv").config();
-const URL = `https://api.unsplash.com/search/photos?page=1&per_page=50&client_id=${process.env.KEY}`;
+const URL = "/.netlify/functions/token-hider?query=";
 const input = document.querySelector(".input");
 const form = document.querySelector(".search-form");
 const background = document.querySelector(".background");
@@ -8,8 +7,7 @@ const header = document.querySelector(".title");
 let results = [];
 
 search = (searchTerm) => {
-  let url = `${URL}&query=${searchTerm}`;
-  return fetch(url)
+  return fetch(`/.netlify/functions/token-hider?search=${searchTerm}`)
     .then((response) => response.json())
     .then((result) => {
       toggleStyles();
