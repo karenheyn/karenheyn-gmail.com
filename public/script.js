@@ -23,16 +23,17 @@ search = (searchTerm) => {
           "<img class='image' src=" + image.urls.regular + ">";
         form.classList.remove("toggle-show");
         input.classList.add("header-expanded");
-        form.addEventListener("submit", (e) => {
-          e.preventDefault();
-          document.querySelector(".results-page").remove();
-        });
       });
 
       console.log(result.results);
       return results;
     });
 };
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  document.querySelector(".results-page").remove();
+});
 
 toggleStyles = () => {
   const resultsContainer = document.createElement("div");
