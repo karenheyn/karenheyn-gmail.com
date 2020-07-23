@@ -137,6 +137,10 @@ input::placeholder {
         font-size: 11px;
     }
 
+    .results-page {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
 
 }
 
