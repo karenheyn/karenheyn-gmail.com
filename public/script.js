@@ -4,6 +4,7 @@ const form = document.querySelector(".search-form");
 const background = document.querySelector(".background");
 const overlay = document.querySelector(".overlay");
 const header = document.querySelector(".title");
+const searchHeader = document.querySelector(".search-header");
 let results = [];
 
 search = (searchTerm) => {
@@ -33,6 +34,7 @@ search = (searchTerm) => {
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   document.querySelector(".results-page").remove();
+  searchHeader.remove();
 });
 
 toggleStyles = () => {
