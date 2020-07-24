@@ -15,3 +15,4 @@ I built this project in order to show how vanilla JS can be used to work with th
 - HTML5
 - CSS3
 - JAVASCRIPT
+- LAMBDA FUNCTIONS
